@@ -3,4 +3,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-ReactDOM.render(<div>Hello, world!</div>, document.getElementById("app"));
+import students from "../public/students.json"
+
+ReactDOM.render(<div>{students[0].firstName}</div>, document.getElementById("app"));

@@ -1,3 +1,6 @@
+import studentList from "../public/students.json"
+import filterByAttendance from "../utilities.js"
+
 // INITIAL STATE
 const allStudents = {
   students: []
@@ -14,8 +17,8 @@ const gotStudents = students => ({
 
 // THUNK CREATORS
 export const getStudents = attendancePercentage => async dispatch => {
-  const {data} = await axios.get(`/api/studentss/${attendancePercentage}`);
-  dispatch(gotStudents(data));
+  const filteredStudentList = await filterByAttendance(studentList, attendancePercentage)
+  dispatch(gotStudents(filteredStudentList));
 };
 
 // REDUCER
