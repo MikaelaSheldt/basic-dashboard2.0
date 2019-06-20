@@ -1,8 +1,17 @@
 // client entry point
 
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react'
+import {render} from 'react-dom'
+import {Provider} from 'react-redux'
 
 import students from "../public/students.json"
+import store from './store'
+import App from './components/App'
 
-ReactDOM.render(<div>{students[0].firstName}</div>, document.getElementById("app"));
+render(
+
+  <Provider store={store}>
+      <App/>
+  </Provider>,
+  document.getElementById('app')
+)

@@ -1,5 +1,5 @@
-import studentList from "../public/students.json"
-import filterByAttendance from "../utilities.js"
+import studentList from "../../public/students.json"
+import filterByAttendance from "../utilities"
 
 // INITIAL STATE
 const allStudents = {
@@ -18,6 +18,7 @@ const gotStudents = students => ({
 // THUNK CREATORS
 export const getStudents = attendancePercentage => async dispatch => {
   const filteredStudentList = await filterByAttendance(studentList, attendancePercentage)
+  console.log(filteredStudentList);
   dispatch(gotStudents(filteredStudentList));
 };
 

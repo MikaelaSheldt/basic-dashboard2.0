@@ -9,7 +9,7 @@ class InputField extends Component {
   constructor() {
     super()
     this.state = {
-        attendancePercentage: '',
+        attendancePercentage: 0,
     }
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -18,7 +18,6 @@ class InputField extends Component {
   handleInputChange(event) {
     const target = event.target;
     const value = target.value;
-    const attendancePercentage = target.attendancePercentage;
 
     this.setState({
       attendancePercentage: value
