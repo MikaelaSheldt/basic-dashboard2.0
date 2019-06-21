@@ -1,4 +1,4 @@
-import studentList from "../../public/students.json"
+import sortedStudents from "../../public/sortedStudents"
 import filterByAttendance from "../utilities"
 
 // INITIAL STATE
@@ -17,7 +17,7 @@ const gotStudents = students => ({
 
 // THUNK CREATORS
 export const getStudents = attendancePercentage => async dispatch => {
-  const filteredStudentList = await filterByAttendance(studentList, attendancePercentage)
+  const filteredStudentList = await filterByAttendance(sortedStudents, attendancePercentage)
   dispatch(gotStudents(filteredStudentList));
 };
 
