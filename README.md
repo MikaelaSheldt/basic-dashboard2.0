@@ -3,6 +3,8 @@
 Allows users to view a filtered list of students based on average attendance.
 The user inputs an average attendance and is able to see a list of student's who's average attendance is the same or less than the entered average.
 The table also shows contact information for both the student and their school counselor.
+view deployed version at
+https://mikaelas-dashboard-one.herokuapp.com/
 
 ## Application file structure
 
@@ -33,7 +35,7 @@ A very basic stylesheet and html file as well as hardcoded student data. I've im
   Here I've created the store and included some logging middleware for debugging purposes. I've kept the store separate from the reducer to facilitate using combined reducers in the future.
   #### dashboard.js
   This is the reducer for the dashboard. The sorted student list is imported and used as an argument in the getStudents thunk creator. gotStudents then delivers a payload to the reducer and creates a new global state.
-  ### components - 
+  ### components -
   #### Base.js:
   A container component for the dashboard.
   #### AttendanceInput.js:
