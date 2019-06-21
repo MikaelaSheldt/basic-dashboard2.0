@@ -11,7 +11,6 @@ import Paper from '@material-ui/core/Paper';
 
 const styles = (theme) => ({
   root: {
-    //width: '98%',
     margin: 50
   },
   paper: {

@@ -1,7 +1,5 @@
 import React from 'react'
 
-import InputField from "./InputField"
-import StudentList from "./StudentList"
 import withStyles from '@material-ui/core/styles/withStyles'
 import Typography from '@material-ui/core/Typography'
 
@@ -23,7 +21,7 @@ const Header = (props) => {
         DASHBOARD
       </Typography>
       <Typography component="p">
-        enter a number to view students with same average attendance and below
+        Enter a number to view students with same average attendance and below.
       </Typography>
     </div>
   )

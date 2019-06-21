@@ -31,12 +31,12 @@ const styles = (theme) => ({
   },
 })
 
-export class DataInput extends Component {
+class AttendanceInput extends Component {
 
   constructor() {
     super()
     this.state = {
-        attendancePercentage: 0,
+      attendancePercentage: 0,
     }
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -53,31 +53,31 @@ export class DataInput extends Component {
 
   handleSubmit (event) {
     event.preventDefault()
-    const input = this.state.attendancePercentage
-    this.props.getStudents(input)
+    const attendancePercentage = this.state.attendancePercentage
+    this.props.getStudents(attendancePercentage)
   }
 
 
   render () {
     const {classes} = this.props
     return (
-        <div className={classes.container}>
-          <Header />
-          <div className={classes.inline}>
-            <TextField
-                  className={classes.textField}
-                  id="outlined-helperText"
-                  label="Attendance %"
-                  helperText="Please enter a number"
-                  margin="normal"
-                  value={this.state.attendancePercentage}
-                  onChange={this.handleInputChange}
-            />
-            <Button onClick={this.handleSubmit} variant="outlined" className={classes.button}>
-              Filter Students
-            </Button>
-          </div>
-      </div>
+      <div className={classes.container}>
+        <Header />
+        <div className={classes.inline}>
+          <TextField
+            className={classes.textField}
+            id="outlined-helperText"
+            label="Attendance %"
+            helperText="Please enter a number"
+            margin="normal"
+            value={this.state.attendancePercentage}
+            onChange={this.handleInputChange}
+          />
+          <Button onClick={this.handleSubmit} variant="outlined" className={classes.button}>
+            Filter Students
+          </Button>
+        </div>
+    </div>
     )
   }
 
@@ -87,4 +87,4 @@ const mapDispatchToProps = (dispatch) => ({
   getStudents: (attendancePercentage) => dispatch(getStudents(attendancePercentage))
 })
 
-export default connect(null, mapDispatchToProps)(withStyles(styles)(DataInput))
+export default connect(null, mapDispatchToProps)(withStyles(styles)(AttendanceInput))

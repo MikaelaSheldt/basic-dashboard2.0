@@ -3,7 +3,7 @@ import withStyles from '@material-ui/core/styles/withStyles'
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
-import DataInput from "./DataInput"
+import AttendanceInput from "./AttendanceInput"
 import StudentTable from "./StudentTable"
 
 const styles = (theme) => ({
@@ -16,13 +16,13 @@ const styles = (theme) => ({
   },
 })
 
-export function Base(props) {
+function Base(props) {
   const {classes} = props
 
   return (
     <div className={classes.root}>
       <Paper >
-        <DataInput />
+        <AttendanceInput />
         <StudentTable />
       </Paper>
     </div>
