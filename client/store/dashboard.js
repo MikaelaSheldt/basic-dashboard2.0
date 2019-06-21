@@ -1,3 +1,6 @@
+import sortedStudents from "../../public/sortedStudents"
+import filterByAttendance from "../utilities"
+
 // INITIAL STATE
 const allStudents = {
   students: []
@@ -14,15 +17,15 @@ const gotStudents = students => ({
 
 // THUNK CREATORS
 export const getStudents = attendancePercentage => async dispatch => {
-  const {data} = await axios.get(`/api/studentss/${attendancePercentage}`);
-  dispatch(gotStudents(data));
+  const filteredStudentList = await filterByAttendance(sortedStudents, attendancePercentage)
+  dispatch(gotStudents(filteredStudentList));
 };
 
 // REDUCER
 export default function(state = allStudents, action) {
   switch (action.type) {
     case GOT_STUDENTS: {
-      return action.students;
+      return {...state, students: action.students};
     }
     default:
       return state;
