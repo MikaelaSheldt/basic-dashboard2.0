@@ -29,15 +29,15 @@ A very basic stylesheet and html file as well as hardcoded student data. I've im
   #### index.js:
   This is the entry point to the application. Here the redux-store and material-theme are provided to the childeren components.
   ### store:
-    while it would be simple enough to build this dashboard without redux, I prefer/enjoy keeping state central and de-coupled when I can.
-    #### index.js:
-    Here I've created the store and included some logging middleware for debugging purposes. I've kept the store separate from the reducer to facilitate using combined reducers in the future.
-    #### dashboard.js
-    This is the reducer for the dashboard. The sorted student list is imported and used as an argument in the getStudents thunk creator. gotStudents then delivers a payload to the reducer and creates a new global state.
+  while it would be simple enough to build this dashboard without redux, I prefer/enjoy keeping state central and de-coupled when I can.
+  #### index.js:
+  Here I've created the store and included some logging middleware for debugging purposes. I've kept the store separate from the reducer to facilitate using combined reducers in the future.
+  #### dashboard.js
+  This is the reducer for the dashboard. The sorted student list is imported and used as an argument in the getStudents thunk creator. gotStudents then delivers a payload to the reducer and creates a new global state.
   ### components:
-    #### Base.js:
-    A container component for the dashboard.
-    #### AttendanceInput.js:
-    A connected class component with local state for user input. Also renders the #### Header.js component.
-    #### StudentTable.js:
-    The Material Table component is the star of the show. I can't take credit for this styling or formatting, but I really appreciate how easy it was to implement. This is where the value of a frontend framework really shows.
+  #### Base.js:
+  A container component for the dashboard.
+  #### AttendanceInput.js:
+  A connected class component with local state for user input. Also renders the #### Header.js component.
+  #### StudentTable.js:
+  The Material Table component is the star of the show. I can't take credit for this styling or formatting, but I really appreciate how easy it was to implement. This is where the value of a frontend framework really shows.
