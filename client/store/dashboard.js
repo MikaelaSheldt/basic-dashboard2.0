@@ -18,7 +18,6 @@ const gotStudents = students => ({
 // THUNK CREATORS
 export const getStudents = attendancePercentage => async dispatch => {
   const filteredStudentList = await filterByAttendance(studentList, attendancePercentage)
-  console.log(filteredStudentList);
   dispatch(gotStudents(filteredStudentList));
 };
 
@@ -26,7 +25,7 @@ export const getStudents = attendancePercentage => async dispatch => {
 export default function(state = allStudents, action) {
   switch (action.type) {
     case GOT_STUDENTS: {
-      return action.students;
+      return {...state, students: action.students};
     }
     default:
       return state;
