@@ -6,35 +6,34 @@ The table also shows contact information for both the student and their school c
 
 ## Application file structure
 
-### server:
-***
-I've used a very basic Express server. Volleyball and Morgan are my go-to logging middleware. There isn't much exciting happing here, but the foundation is laid for easy REST API development and database integration.
-***
-
 #### .gitignore:
 During development I have git ignore the node modules and the webpack bundle outputs
 
 #### webpack.config.js:
 I use webpack to bundle files and monitor changes during development. I've pointed the webpack output to public to keep them out of the way, and set client/index.js as the entry point. I'm using babel so that I can write with modern JS.
 
-### public:
+### server -
+***
+I've used a very basic Express server. Volleyball and Morgan are my go-to logging middleware. There isn't much exciting happing here, but the foundation is laid for easy REST API development and database integration.
+
+### public -
 ***
 A very basic stylesheet and html file as well as hardcoded student data. I've imported student.json into sortedStudents.js. The data is then sorted by average attendance and exported. I chose to only sort the data once for two reasons. This feels most similar to a practical application where sorted json data would be served to the client via an API. Also, ordering the data lowest to highest makes students with the lowest attendance average always at the top of the list and visible. Given more time, I'd like to allow the user to control sorting.  
 
-### client:
+### client -
 ***
   I've chosen Material as a frontend framework. I am familiar with it and find the react-redux integration to be intuitive. The components are great for quickly developing a clean UI out of the box.
   #### utilities.js:
   This is where I like to store functions that get used throughout the client. In this case it holds the filterByAttendance function that get used in the redux reducer.
   #### index.js:
   This is the entry point to the application. Here the redux-store and material-theme are provided to the childeren components.
-  ### store:
+  ### store -
   while it would be simple enough to build this dashboard without redux, I prefer/enjoy keeping state central and de-coupled when I can.
   #### index.js:
   Here I've created the store and included some logging middleware for debugging purposes. I've kept the store separate from the reducer to facilitate using combined reducers in the future.
   #### dashboard.js
   This is the reducer for the dashboard. The sorted student list is imported and used as an argument in the getStudents thunk creator. gotStudents then delivers a payload to the reducer and creates a new global state.
-  ### components:
+  ### components - 
   #### Base.js:
   A container component for the dashboard.
   #### AttendanceInput.js:
