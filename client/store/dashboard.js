@@ -1,3 +1,5 @@
+// state management related to the dashboard
+
 import sortedStudents from "../../public/sortedStudents"
 import filterByAttendance from "../utilities"
 

@@ -87,4 +87,5 @@ const mapDispatchToProps = (dispatch) => ({
   getStudents: (attendancePercentage) => dispatch(getStudents(attendancePercentage))
 })
 
+// exports new component that is connected to redux store and material theme 
 export default connect(null, mapDispatchToProps)(withStyles(styles)(AttendanceInput))

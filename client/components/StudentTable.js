@@ -24,7 +24,7 @@ const styles = (theme) => ({
   },
 });
 
-export function StudentTable(props) {
+function StudentTable(props) {
   const {classes} = props
   const students = props.students
 
@@ -69,4 +69,5 @@ const mapStateToProps = (state) => ({
   students: state.students
 })
 
+// exports new component that is connected to redux store and material theme
 export default connect(mapStateToProps)(withStyles(styles)(StudentTable))

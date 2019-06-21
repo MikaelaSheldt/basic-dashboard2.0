@@ -27,4 +27,5 @@ const Header = (props) => {
   )
 }
 
+// exports new component that is connected to the material theme
 export default withStyles(styles)(Header)
