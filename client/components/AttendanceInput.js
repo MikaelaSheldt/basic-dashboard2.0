@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
+import Paper from '@material-ui/core/Paper';
 import withStyles from '@material-ui/core/styles/withStyles'
 
 import { getStudents } from '../store/dashboard'
@@ -17,14 +18,15 @@ const styles = (theme) => ({
     alignItems: 'center',
     flexWrap: 'wrap',
   },
-  inline: {
+  form: {
+    display: 'flex',
     flexDirection: 'row',
-    alignContent: "center"
+    alignItems: "center"
   },
   textField: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
-    width: 200,
+    width: 140,
   },
   button: {
     margin: theme.spacing(1),
@@ -63,7 +65,7 @@ class AttendanceInput extends Component {
     return (
       <div className={classes.container}>
         <Header />
-        <div className={classes.inline}>
+        <div className={classes.form}>
           <TextField
             className={classes.textField}
             id="outlined-helperText"
@@ -73,7 +75,7 @@ class AttendanceInput extends Component {
             value={this.state.attendancePercentage}
             onChange={this.handleInputChange}
           />
-          <Button onClick={this.handleSubmit} variant="outlined" className={classes.button}>
+          <Button onClick={this.handleSubmit} variant="outlined"  className={classes.button}>
             Filter Students
           </Button>
         </div>
@@ -87,5 +89,5 @@ const mapDispatchToProps = (dispatch) => ({
   getStudents: (attendancePercentage) => dispatch(getStudents(attendancePercentage))
 })
 
-// exports new component that is connected to redux store and material theme 
+// exports new component that is connected to redux store and material theme
 export default connect(null, mapDispatchToProps)(withStyles(styles)(AttendanceInput))
