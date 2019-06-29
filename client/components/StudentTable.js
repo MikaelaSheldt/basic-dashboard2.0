@@ -11,7 +11,7 @@ import Paper from '@material-ui/core/Paper';
 
 const styles = (theme) => ({
   root: {
-    margin: 50
+    margin: 50,
   },
   paper: {
     marginTop: theme.spacing(3),
@@ -21,19 +21,21 @@ const styles = (theme) => ({
   },
   table: {
     minWidth: 650,
-  },
+  }
 });
+
 
 function StudentTable(props) {
   const {classes} = props
   const students = props.students
 
   return (
-    <div className={classes.root}>
-      <Paper className={classes.paper}>
-        <Table className={classes.table} size="small">
-          <TableHead>
-            <TableRow>
+
+    <div className={classes.root} >
+      <Paper className={classes.paper} >
+        <Table className={classes.table} size="small" >
+          <TableHead >
+            <TableRow >
               <TableCell>Name</TableCell>
               <TableCell align="left">Attendance Percentage</TableCell>
               <TableCell align="left">Email</TableCell>
@@ -45,7 +47,7 @@ function StudentTable(props) {
           </TableHead>
           <TableBody>
             {students.map(student => (
-              <TableRow key={student.studentId}>
+              <TableRow key={student.studentId} className={classes.row}>
                 <TableCell component="th" scope="student">
                   {`${student.firstName} ${student.lastName}`}
                 </TableCell>

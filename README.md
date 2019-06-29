@@ -1,4 +1,4 @@
-# Basic Dashboard
+# Basic Dashboard 2.0
 
 Allows users to view a filtered list of students based on average attendance.
 The user inputs an average attendance and is able to see a list of student's who's average attendance is the same or less than the entered average.

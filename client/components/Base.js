@@ -4,7 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
 import AttendanceInput from "./AttendanceInput"
-import StudentTable from "./StudentTable"
+import FancyStudentTable from "./FancyStudentTable"
 
 const styles = (theme) => ({
   root: {
@@ -23,11 +23,11 @@ function Base(props) {
     <div className={classes.root}>
       <Paper >
         <AttendanceInput />
-        <StudentTable />
+        <FancyStudentTable />
       </Paper>
     </div>
   );
 }
 
-// exports new component that is connected to the material theme 
+// exports new component that is connected to the material theme
 export default withStyles(styles)(Base)
