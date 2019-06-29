@@ -3,7 +3,7 @@
 const router = require('express').Router()
 
 // matches all requests to /api/students/
-router.use('/students', require('./students')
+router.use('/students', require('./students'))
 
 router.use((req, res, next) => {
   const err = new Error('API route not found!')
