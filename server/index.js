@@ -19,6 +19,9 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
+// connect to api routes
+app.use('/api', require('./api'))
+
 // send index.html by default
 app.get("*", function(req, res, next) {
   res.sendFile(path.join(__dirname, "../public/index.html"));
