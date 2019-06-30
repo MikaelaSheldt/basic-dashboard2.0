@@ -7,8 +7,8 @@ import Paper from '@material-ui/core/Paper';
 const styles = (theme) => ({
   root: {
     margin: 50,
-    display: 'inline-block'
-    max-width: 900px
+    display: 'inline-block',
+    maxWidth: 900
   },
   paper: {
     margin: theme.spacing(3),
