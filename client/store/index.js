@@ -1,6 +1,6 @@
 import {createStore, applyMiddleware} from 'redux'
 import {composeWithDevTools} from 'redux-devtools-extension'
-import dashboardReducer from './dashboard'
+import studentsReducer from './students'
 import { createLogger } from 'redux-logger'
 import  thunkMiddleware  from 'redux-thunk'
 
@@ -9,6 +9,6 @@ const middleware = composeWithDevTools(
 )
 
 export default createStore(
-  dashboardReducer,
+  studentsReducer,
   middleware
   )

@@ -6,7 +6,6 @@ import {Provider} from 'react-redux'
 
 import {createMuiTheme, MuiThemeProvider, responsiveFontSizes} from '@material-ui/core/styles'
 
-import students from "../public/students.json"
 import store from './store'
 import Base from './components/Base'
 

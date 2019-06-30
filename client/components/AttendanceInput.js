@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography'
 import Paper from '@material-ui/core/Paper';
 import withStyles from '@material-ui/core/styles/withStyles'
 
-import { getStudents } from '../store/dashboard'
+import { getStudents } from '../store/students'
 import Header from './Header'
 
 const styles = (theme) => ({
