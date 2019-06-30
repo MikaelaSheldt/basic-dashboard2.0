@@ -8,6 +8,7 @@ const styles = (theme) => ({
   root: {
     margin: 50,
     display: 'inline-block'
+    max-width: 900px
   },
   paper: {
     margin: theme.spacing(3),
