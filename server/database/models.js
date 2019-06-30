@@ -6,13 +6,13 @@ const mongoose = require('mongoose')
 //SCHEMAS
 const Schema = mongoose.Schema
 
-const NoteSchema = new Schema({
-  author: String,
-  content: String,
-  createdAt: {
-    type: Date, default: Date.now
-  }
-})
+// const NoteSchema = new Schema({
+//   author: String,
+//   content: String,
+//   createdAt: {
+//     type: Date, default: Date.now
+//   }
+// })
 
 const StudentSchema = new Schema({
   firstName: String,
@@ -34,7 +34,7 @@ const StudentSchema = new Schema({
   hasPassedRegents: Boolean,
   status: String,
   adminDate: String,
-  notes: [NoteSchema]
+  //notes: [NoteSchema]
 })
 
 // MODELS
@@ -42,4 +42,4 @@ const Student = mongoose.model("Student", StudentSchema)
 
 
 
-module.exports.Student = Student
+module.exports = Student
