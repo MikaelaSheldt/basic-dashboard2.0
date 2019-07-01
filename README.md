@@ -1,10 +1,30 @@
 # Basic Dashboard 2.0
 
+Builds upon Basic Dashboard https://github.com/MikaelaSheldt/basic-dashboard
+Impliments a more dynamic table from https://material-table.com/#/docs/get-started
+Also integrates a MongoDB datastore.
 Allows users to view a filtered list of students based on average attendance.
 The user inputs an average attendance and is able to see a list of student's who's average attendance is the same or less than the entered average.
 The table also shows contact information for both the student and their school counselor.
-view deployed version at
-https://mikaelas-dashboard-one.herokuapp.com/
+
+## Installation and Use
+required: MonogoDB (installed and datastore configured)
+
+Fork and clone repo to your machine
+```
+git clone https://github.com/MikaelaSheldt/basic-dashboard2.0
+```
+cd into new git repo and install node packages
+```
+npm install
+```
+seed the database
+```
+npm run seed
+```
+start server and start playing with code!
+```npm run start-dev
+```
 
 ## Application file structure
 
