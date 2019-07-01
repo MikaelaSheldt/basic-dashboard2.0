@@ -6,6 +6,7 @@ import Paper from '@material-ui/core/Paper';
 
 
 class FancyStudentTable extends React.Component {
+
   render() {
     const students = this.props.students
     return (
@@ -15,12 +16,13 @@ class FancyStudentTable extends React.Component {
         columns={[
           { title: 'Name', field: 'firstName' },
           { title: 'Last Name', field: 'lastName' },
-          { title: 'Student ID', field: 'studentId', type: 'numeric' },
           { title: 'Attendance Percentage', field: 'attendancePercentage', type: 'numeric' },
-          { title: 'Grade', field: 'grade', type: 'numeric' },
           { title: 'Email', field: 'email' },
+          { title: 'Home Phone', field: 'homePhoneNumber' },
           { title: 'Guidance Counselor', field: 'guidanceCounselor' },
           { title: 'Guidance Counselor Email', field: 'guidanceCounselorEmail' },
+          { title: 'Grade', field: 'grade', type: 'numeric' },
+          { title: 'Student ID', field: 'studentId', type: 'numeric' },
         ]}
         data={students}
         components={{
@@ -38,17 +40,20 @@ class FancyStudentTable extends React.Component {
         )
     }}
         options={{
-          selection: true,
           showTitle: false,
-          showSelectAllCheckbox: false,
-          pageSize: 10,
+          pageSize: 5,
           doubleHorizontalScroll: true
         }}
         actions={[
           {
-            tooltip: 'Remove All Selected Users',
-            icon: 'comment',
-            onClick: (evt, data) => alert('You want to delete ' + data.length + ' rows')
+            icon: 'list',
+            tooltip: 'View Notes',
+            onClick: (event, rowData) => alert("NOTES FOR:\n" + rowData.firstName + ' ' + rowData.lastName)
+          },
+          {
+            icon: 'add',
+            tooltip: 'Add Note',
+            onClick: (event, rowData) => alert("You've added a note to\n" + rowData.firstName + ' ' + `${rowData.lastName}'s records.`)
           }
         ]}
       />

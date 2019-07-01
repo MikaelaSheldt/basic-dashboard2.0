@@ -34,7 +34,7 @@ const StudentSchema = new Schema({
   hasPassedRegents: Boolean,
   status: String,
   adminDate: String,
-  //notes: [NoteSchema]
+  notes: [Schema.Types.Mixed]
 })
 
 // MODELS
