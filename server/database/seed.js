@@ -12,9 +12,6 @@ const handleError = (err) => {
 }
 
 async function seed() {
-  // await Student.deleteMany({}, (err) => {
-  //   if (err) return handleError(err)
-  // })
   await Student.insertMany(sortedStudents, (err) => {
     if (err) return handleError(err)
   })

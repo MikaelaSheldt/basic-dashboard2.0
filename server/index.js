@@ -39,7 +39,7 @@ app.use((err, req, res, next) => {
 const port = process.env.PORT || 1080;
 //useful for Heroku
 
-// connect to database
+// connect to database and handle errors
 mongoose.connect('mongodb://localhost:27017/basicDashboard2', {useNewUrlParser: true});
 
 const db = mongoose.connection

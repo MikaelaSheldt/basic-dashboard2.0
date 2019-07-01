@@ -6,6 +6,8 @@ const mongoose = require('mongoose')
 //SCHEMAS
 const Schema = mongoose.Schema
 
+// possibly using a subdocuments for student.notes
+
 // const NoteSchema = new Schema({
 //   author: String,
 //   content: String,

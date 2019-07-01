@@ -24,7 +24,7 @@ import Base from './components/Base'
 //   }
 // }))
 
-// provides child components the ability to connect to the redux store and Material-theme
+// provides child components the ability to connect to the redux store 
 render(
   <Provider store={store}>
     <Base />
@@ -32,6 +32,7 @@ render(
   document.getElementById('app')
 )
 
+// provides child components the ability to connect to the Material-theme
 // <MuiThemeProvider theme={theme}>
 //   <Base />
 // </MuiThemeProvider>

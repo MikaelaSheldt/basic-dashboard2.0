@@ -14,6 +14,7 @@ router.get('/', (req, res, next) => {
   })
 })
 
+// matches GET requests to /api/students/:attendancePercentage/
 router.get('/:attendancePercentage', async (req, res, next) => {
   try {
     const students = await Student.find({attendancePercentage: { $lte: req.params.attendancePercentage }}).exec();

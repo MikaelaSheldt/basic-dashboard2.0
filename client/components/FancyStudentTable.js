@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import MaterialTable from 'material-table'
-import withStyles from '@material-ui/core/styles/withStyles'
 import Paper from '@material-ui/core/Paper';
 
 

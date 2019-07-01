@@ -1,8 +1,6 @@
 // state management related to the dashboard
 import axios from 'axios'
 
-//import sortedStudents from "../../public/sortedStudents"
-//import filterByAttendance from "../utilities"
 
 // INITIAL STATE
 const allStudents = {
@@ -18,12 +16,7 @@ const gotStudents = students => ({
   students
 });
 
-// THUNK CREATORS
-// export const getStudents = attendancePercentage => async dispatch => {
-//   const filteredStudentList = await filterByAttendance(sortedStudents, attendancePercentage)
-//   dispatch(gotStudents(filteredStudentList));
-// };
-
+//THUNK CREATORS
 export const getStudents = attendancePercentage => async dispatch => {
   const {data} = await axios.get(`/api/students/${attendancePercentage}`)
   dispatch(gotStudents(data))
