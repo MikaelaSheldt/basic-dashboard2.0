@@ -8,12 +8,15 @@ import FancyStudentTable from "./FancyStudentTable"
 
 const styles = (theme) => ({
   root: {
-    padding: theme.spacing(3, 2),
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
+  paper: {
+    width: '100%',
+    maxWidth: 900
+  }
 })
 
 function Base(props) {
@@ -21,7 +24,7 @@ function Base(props) {
 
   return (
     <div className={classes.root}>
-      <Paper >
+      <Paper className={classes.paper} >
         <AttendanceInput />
         <FancyStudentTable />
       </Paper>
