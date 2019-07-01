@@ -4,30 +4,13 @@ import MaterialTable from 'material-table'
 import withStyles from '@material-ui/core/styles/withStyles'
 import Paper from '@material-ui/core/Paper';
 
-const styles = (theme) => ({
-  root: {
-    margin: 50,
-    display: 'inline-block',
-    maxWidth: 900
-  },
-  paper: {
-    margin: theme.spacing(3),
-    width: '100%',
-    overflowX: 'auto',
-    marginBottom: theme.spacing(2),
-  },
-  table: {
-    minWidth: 650,
-  }
-});
 
 class FancyStudentTable extends React.Component {
   render() {
-    const classes = this.props.classes
     const students = this.props.students
     return (
       <MaterialTable
-        className={classes.paper}
+
         title="Student Table"
         columns={[
           { title: 'Name', field: 'firstName' },
@@ -43,8 +26,12 @@ class FancyStudentTable extends React.Component {
         components={{
         Container: props => (
             <div style={{
-              margin: 50,
-              width: '90%'
+              marginTop: 50,
+              marginRight: 'auto',
+              marginLeft: 'auto',
+              marginBottom: 50,
+              width: '90%',
+              maxWidth: 900
             }}>
                 <Paper {...props} />
             </div>
@@ -74,4 +61,4 @@ const mapStateToProps = (state) => ({
 })
 
 // exports new component that is connected to redux store
-export default connect(mapStateToProps)(withStyles(styles)(FancyStudentTable))
+export default connect(mapStateToProps)(FancyStudentTable)
