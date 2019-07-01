@@ -23,7 +23,8 @@ seed the database
 npm run seed
 ```
 start server and start playing with code!
-```npm run start-dev
+```
+npm run start-dev
 ```
 
 ## Application file structure
