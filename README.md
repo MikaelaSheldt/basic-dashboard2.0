@@ -65,3 +65,4 @@ A very basic stylesheet and html file as well as hardcoded student data. I've im
   The Material Table component is the star of the show. I can't take credit for this styling or formatting, but I really appreciate how easy it was to implement. This is where the value of a frontend framework really shows.
 
   (I was added safely)
+  safe without thinking
