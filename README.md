@@ -63,3 +63,5 @@ A very basic stylesheet and html file as well as hardcoded student data. I've im
   A connected class component with local state for user input. Also renders the Header.js component.
   #### StudentTable.js:
   The Material Table component is the star of the show. I can't take credit for this styling or formatting, but I really appreciate how easy it was to implement. This is where the value of a frontend framework really shows.
+
+  (I was added safely)
